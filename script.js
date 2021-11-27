@@ -220,3 +220,8 @@ function uss(){
 function shiftDeck() {
   return deck.shift();
 }
+function myFunction(){
+  document.getElementById("showWins").style.color="rgb(14, 167, 14)";
+  document.getElementById("showLosses").style.color="red";
+  document.getElementById("showPushes").style.color="black";
+}

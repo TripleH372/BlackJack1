@@ -18,11 +18,4 @@
 ###### A 2-9 will count as the number is shown
 ###### A 10, K, Q, and J will all count as 10.
 ## Scoring
-###### Whatever amount the player bets will be used as a temporary score (your money).
-###### If the Bettor wins the round, he or she will take all the score he or she betted doubled.
-###### For example, if the Bettor were to bet 200 points, then he or she would take back 400 points.
-###### If the Bettor loses the round, he or she will lose the score, and have to bet again.
-## Entering Numbers
-###### Keypad will be used for the Bettor.
-###### The Bettor will not be able to bet MORE than the amount of total score (money) he or she has.
-###### ONLY INTS
+###### A wins, losses, and pushes score track will be kept.
