@@ -205,7 +205,6 @@ function gs(a){
     }
     
     
-    //Playing this game through, I seem to have mathematical issues whenever cards are added when an Ace is in play.
   }
   if(aceChecker && score+10<=21) return score+10;
   else return score; 
