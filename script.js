@@ -190,10 +190,11 @@ function gs(a){
       aceChecker = true;
     }
     
-    if(aceChecker && score+10<=21) return score+10;
+    
     //Playing this game through, I seem to have mathematical issues whenever cards are added when an Ace is in play.
   }
-   /*else*/return score; 
+  if(aceChecker && score+10<=21) return score+10;
+  else return score; 
 }
 
 function uss(){
