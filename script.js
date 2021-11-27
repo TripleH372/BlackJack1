@@ -2,6 +2,9 @@
 // Drew immediate code and transferred from Aphrx's (YouTuber) Python code.
 // Changed a little code by being inspired from here but didn't copy anything: https://www.thatsoftwaredude.com/content/6417/how-to-code-blackjack-using-javascript
 let kemp=0;
+let winCount=0;
+let lossCount=0;
+let pushCount=0;
 let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
 let vals = ['Ace', 'King', 'Queen', 'Jack',
   'Ten', 'Nine', 'Eight', 'Seven', 'Six',
@@ -9,6 +12,9 @@ let vals = ['Ace', 'King', 'Queen', 'Jack',
 ];
 
 let textArea = document.getElementById('textArea');
+let showWins = document.getElementById('showWins');
+let showLosses = document.getElementById('showLosses');
+let showPushes = document.getElementById('showPushes');
 let newGameButton = document.getElementById('newGameButton');
 let hitButton = document.getElementById('hitButton');
 let standButton = document.getElementById('standButton');
@@ -165,13 +171,21 @@ function showStatus()
   let string1=textArea.innerText;
                         
   if(isItOver){
-    if(playerScore==dealerScore) textArea.innerText=string1+"Push!";
+    if(playerScore==dealerScore){
+     textArea.innerText=string1+"Push!";
+     pushCount++;
+     showPushes.innerText="Pushes (Ties): "+pushCount;
+    }
     else{if(playerWon)
     {
       textArea.innerText=string1+"You won!";
+      winCount++;
+      showWins.innerText="Wins: "+winCount;
     }
     else{
       textArea.innerText=string1+"You lost!";
+      lossCount++;
+      showLosses.innerText="Losses: "+lossCount;
     }}
     newGameButton.style.display = 'inline';
     hitButton.style.display = 'none';
